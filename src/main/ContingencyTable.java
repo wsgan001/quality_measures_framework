@@ -122,4 +122,13 @@ public class ContingencyTable {
         this.fn = fn;
     }
     
+    /**
+     * Gets the total number of observations in the contingency table
+     * 
+     * @return 
+     */
+    public double getTotalExamples(){
+        return (double)(fn + tp + tn +fp);
+    }
+    
 }

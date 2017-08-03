@@ -27,7 +27,12 @@ import main.QualityMeasure;
 import main.ContingencyTable;
 
 /**
- *
+ * Confidence Quality Measure. It measures the precision of a pattern with respect
+ * to the examples it covers.
+ * <p>
+ * Ref.:
+ * U. M. Fayyad, G. Piatetsky-Shapiro, and P. Smyth. From data mining to knowledge discovery: an overview. In Advances in knowledge discovery and data mining, pages 1–34. AAAI/MIT Press, 1996.
+ * </p>
  * @author Angel Miguel Garcia Vico <agvico at ujaen.es>
  */
 public class Confidence extends QualityMeasure{
@@ -42,7 +47,7 @@ public class Confidence extends QualityMeasure{
 
     @Override
     public boolean validate(double value) {
-        return value <= 1 && value >= 0;
+        return value <= 1.0 && value >= 0.0;
     }
     
 }
